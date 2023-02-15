@@ -1,0 +1,107 @@
+.SignUp{
+    display: flex;
+    justify-content: center;
+
+    .SignUp__Container{
+        background-color: #fff;
+        width: 500px;
+        position: relative;
+        box-sizing: border-box;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+        margin-top: 2%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 34px;
+        z-index: 1;
+
+        .SignUp__Header{
+            font-size: medium;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+
+            h3{
+                font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
+                margin-bottom: 10px;
+            }
+
+            h4{
+                font-size: calc(12px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+                color: #647589;
+                margin-top: 0;
+            }
+
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .SignUp__Form{
+            .SignUp__btnSubmit{
+                margin-top: 15px;
+                background-color: #1c9dea;
+                text-transform: none;
+                .Circular{
+                    color: white;
+                }
+            }
+            .haveAccount{
+                color: #72767d;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                .linktoSignin{
+                    color:#7289da;
+                    text-align: right;
+                    text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+                }
+            }
+        }
+        .Signup__termscondition{
+            text-align: center;
+            font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+            color: #647589;
+            margin-top: 10px;
+            h4{
+                cursor: pointer;
+                .dot{
+                    color: #ff4e2b;
+                    margin-right: 8px;
+                    font-size: 11px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .bg-svg{
+        background-image:url(../../../../assets/images/background.svg);
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .SignUp{
+        .SignUp__Container{
+            width: 100%;
+        }
+    }
+    .bg-svg{
+        background-image: none;
+    }
+
+   
+}

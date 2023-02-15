@@ -1,0 +1,65 @@
+@import url('../../../../../../theme/index.scss');
+
+$backGround-item-hover:rgba(0, 132, 255, .2);
+
+.NotificationItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 16px;
+    height: 64px;
+
+    .NotificationItem__Avatar{
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .NotificationItem__Body{
+        display: flex;
+        margin-right: 40px;
+        flex-direction: column;
+
+        .NotificationItem__Name{
+
+            h4{
+                margin-top: 0px;
+                margin-bottom: 5px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 15px;
+                font-weight: 500;
+                overflow: hidden;
+                max-width: 150px;
+                color: var(--color-text);
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    
+
+    .NotificationItem__Btn{
+        .NotificationItem__Btn--add{
+            background-color: #1c9dea;
+           span{
+            font-size: 10px;
+           }
+        }
+
+        .NotificationItem__Btn--remove{
+            background-color: #1c9dea;
+            margin-left: 5px;
+            span{
+                font-size: 10px;
+               }
+            }
+        }
+    }
+
+    &:hover{
+        background-color: $backGround-item-hover;
+    }
+}

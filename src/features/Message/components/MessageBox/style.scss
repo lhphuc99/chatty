@@ -1,0 +1,97 @@
+@import url('../../../../theme/index.scss');
+
+.MessageBox{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+    height: 100vh;
+    .MessageBox__Header{
+        .MessageBox__ContacBar{
+          
+        }
+
+    }
+    .MessageBox__Body{
+      background-color: var(--color-background--message);
+      padding-top: 5px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: calc(100% - 112px);
+      max-height: calc(100% - 112px);
+    }
+
+    .MessageBox__Footer{
+      background-color: var(--color-background);
+    }
+}
+
+.noSelectContact{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #ecf1fb;
+  align-items: center;
+  justify-content: center;
+  
+  .noSelectContact__Header{
+
+    .noSelectContact__logo{
+      display: flex;
+      align-items: center;
+      img{
+        width: 60px;
+        height: 40px;
+      }
+      h2{
+        margin-right: 5px;
+      }
+      span{
+        color: #1c9dea;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+    h4{
+      margin: 5px;
+      margin-bottom: 30px;
+    }
+  }
+  img{
+    width:calc(500px + 4 * ((100vw - 320px) / (1920 - 320)));
+  }
+}
+
+#scrollbar::-webkit-scrollbar-track
+  {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    background-color: #F5F5F5;
+  }
+  
+  #scrollbar::-webkit-scrollbar
+  {
+    width: 5px;
+    background-color: #F5F5F5;
+  }
+  
+  #scrollbar::-webkit-scrollbar-thumb
+  {
+    border-radius: 20px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color:rgba(176, 218, 243, 0.76);
+  }
+
+  @media screen and (max-width: 800px) {
+    .noSelectContact{
+
+      .noSelectContact__Header{
+        margin-left: 5px;
+      }
+      img{
+        width:calc(100vh - 700px);
+      }
+
+    }
+  }

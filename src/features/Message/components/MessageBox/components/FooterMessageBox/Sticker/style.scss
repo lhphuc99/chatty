@@ -1,0 +1,24 @@
+.stickerItem{
+
+    cursor: pointer;
+}
+
+.titleA{
+    .MuiGridListTile-tile{
+        display: flex;
+        justify-content: center;
+        &:hover{
+            background-color: #929598;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 600px){
+    .backgroundColor{
+        .icon{
+            font-size: 20px;
+        }
+    }
+}

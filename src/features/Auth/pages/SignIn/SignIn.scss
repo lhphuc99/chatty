@@ -1,0 +1,193 @@
+.SignIn{
+    display: flex;
+    justify-content: center;
+    
+    .SignIn__Container{
+        position: relative;
+        background-color: #fff;
+        box-sizing: border-box;
+        box-shadow: 0 5px 10px rgba(0,0,0,.1);
+        height: 100%;
+        width: 500px;
+        padding: 34px;
+        margin-top: 5%;
+        border-radius: 10px;
+        z-index: 1;
+        
+        .SignIn__Header{
+            font-size: medium;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+
+            h3{
+                font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
+                margin-bottom: 10px;
+            }
+
+            h4{
+                font-size: calc(12px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+                color: #647589;
+                margin-top: 0;
+            }
+
+            img{
+                width: 100px;
+                height: 100px;
+                margin-top: 10px;
+            }
+        }
+
+       
+        .SignIn__Form{
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+
+            .SignIn__Input{
+                margin-top: 20px;
+            }
+            .SignIn__Button{
+                width: 100%;
+                margin-top: 10px;
+                align-self: center;
+                background-color: #1c9dea;
+                color: white;
+                text-transform: none;
+
+                .Circular{
+                    color: white;
+                }
+            }
+            .ForgotPassword{
+                color:#7289da;
+                text-align: right;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .SignIn__MediaLogo{
+            list-style: none;
+            font-size: 20px;
+            margin: 0;
+            transform: translateX(-70px);
+            position: absolute;
+            padding-left: 0;
+            top: 40%;
+            
+            .SignIn__IconButton--fb{
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+                border-radius: 20px;
+                background-color: #2c67ce;
+                color: #fff;
+            }
+
+            .SignIn__IconButton--gg{
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+                border-radius: 20px;
+                background-color: #ff4e2b;
+                color: #fff;
+            }
+        }
+
+        .needAccount{
+            display: block;
+            margin-top: 5px;
+            color: #72767d;
+        }
+
+    }
+    .errormessage{
+        margin: 0;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .bg-svg{
+        background-image:url(../../../../assets/images/background.svg);
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+    .SignIn__MediaLogo__container--bottom{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .SignIn{
+        .SignIn__Container{
+            width: 100%;
+            .SignIn__MediaLogo{
+                display: none;
+            }
+            .SignIn__MediaLogo__container--bottom{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                .SignIn__Sep{
+                    width: 100%;
+                    border: 1px solid  #909090;
+                    position: relative;
+                    margin: 25px 20px;
+                    .Or{
+                            font-family: "Montserrat",sans-serif;
+                            position: absolute;
+                            margin-top: -6px;
+                            padding-left:5px;
+                            padding-right: 5px;
+                            font-weight: 600;
+                            left: 36%;
+                            font-size: calc(11px + (12 - 11) * ((100vw - 320px) / (1920 - 320)));
+                            color: #223645;
+                            background:white;
+                    }
+                }
+                .SignIn__MediaLogo__content--bottom{
+                    display: flex;
+                    justify-content: center;
+                    list-style-type: none;
+                    align-items: center;
+                    padding-left: 0;
+    
+                    .SignIn__IconButton--fb{
+                        width: 40px;
+                        height: 40px;
+                        margin: 10px;
+                        border-radius: 20px;
+                        background-color: #2c67ce;
+                        color: #fff;
+                    }
+        
+                    .SignIn__IconButton--gg{
+                        width: 40px;
+                        height: 40px;
+                        margin: 10px;
+                        border-radius: 20px;
+                        background-color: #ff4e2b;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .bg-svg{
+       display: none;
+    }
+
+   
+}

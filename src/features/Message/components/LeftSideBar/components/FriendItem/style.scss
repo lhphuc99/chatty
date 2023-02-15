@@ -1,0 +1,56 @@
+@import url('../../../../../../theme/index.scss');
+
+$backGround-item-hover: rgba(0, 132, 255, 0.2);
+
+.FriendItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 16px;
+  height: 64px;
+
+  .FriendItem__Info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    .FriendItem__Avatar {
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    
+      .FriendItem__Name {
+        h4 {
+          margin-top: 0px;
+          margin-bottom: 5px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 15px;
+          font-weight: 500;
+          overflow: hidden;
+          max-width: 120px;
+          color: var(--color-text);
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+  }
+
+  .FriendItem__Btn {
+    .FriendItem__Btn--remove {
+      background-color: #1c9dea;
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &:hover{
+    background-color:$backGround-item-hover;
+  }
+}

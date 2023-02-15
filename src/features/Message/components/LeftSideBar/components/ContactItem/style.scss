@@ -1,0 +1,58 @@
+@import url('../../../../../../theme/index.scss');
+
+// $color-text:rgba(153, 153, 153, 1);
+$backGround-item-hover:rgba(0, 132, 255, .2);
+
+
+
+.Text{
+    color: var(--color-text-contact);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.ContactItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 16px;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 64px;
+    .ContactItem__Avatar{
+        margin-right: 10px;
+    }
+    .ContactItem__Detail{
+        flex: 1 1 auto;
+        h4, h6{
+            margin: 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 165px;
+            color: var(--color-text);
+        }
+        h4{
+            margin-bottom: 2px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        h6{
+            font-size: 13px;
+            font-weight: 400;
+            color: var(--color-text-last-message);
+        }
+
+    }
+    .ContactItem__DateStatus{
+        @extend .Text;
+    }
+
+    &:hover{
+        background-color:$backGround-item-hover;
+        border-radius: 5px;
+    }
+}

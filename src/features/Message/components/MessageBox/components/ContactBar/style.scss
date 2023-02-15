@@ -1,0 +1,80 @@
+@import url('../../../../../../theme/index.scss');
+
+
+.ContactBar {
+  background-color: var(--color-background);
+  overflow: hidden;
+  height: 60px;
+
+  .ListBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    ul{
+        list-style: none;
+        li{
+            margin-right: 12px;
+        }
+    }
+    .ContactBar__Info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .backArrow{
+        margin-left: 12px;
+        color: #1c9dea;
+        cursor: pointer;
+        display: none;
+      }
+      .ContactBar__Avatar {
+        margin-left: 12px;
+        margin-right: 10px;
+      }
+      h2{
+        font-size: 15px;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        color: var(--color-text);
+      }
+    }
+
+    .ContactBar__Menu {
+      margin: 0;
+      display: flex;
+      .ContactBar__Call {
+        .iconContactbar{
+          color: #1c9dea;;
+        }
+      }
+      .ContactBar__VideoCall {
+        .iconContactbar{
+          color: #1c9dea;
+        }
+      }
+      .ContactBar__Info {
+        .iconContactbar{
+          color: #1c9dea;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .ContactBar{
+    .ListBar{
+      ul{
+        li{
+          margin-right: 5px;
+        }
+      }
+      .ContactBar__Info{
+        .backArrow{
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

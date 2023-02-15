@@ -1,0 +1,98 @@
+.Container {
+  background-color: white;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+
+  .Header--left {
+    img {
+      width: 100%;
+      height: 70vh;
+    }
+  }
+
+  .Right__Content {
+    margin: 20px;
+    width: 600px;
+
+    .Header--right {
+      font-size: medium;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      h3 {
+        font-size: calc(18px + (26 - 18) * ((100vw - 320px) / (1920 - 320)));
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        font-size: calc(12px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
+        color: #647589;
+        margin-top: 0;
+        text-align: center;
+      }
+    }
+    .Form {
+      display: flex;
+      flex-direction: column;
+      .Input {
+        margin-bottom: 15px;
+      }
+      .BackHome {
+        .LinkResetPassword {
+          color: #7289da;
+          text-align: right;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .ResetPassword__btn {
+        width: 100%;
+        align-self: center;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        background-color: #1c9dea;
+        text-transform: none;
+
+        .Circular {
+          color: white;
+        }
+      }
+
+      #g-recaptcha {
+        transform: scale(0.77);
+        transform-origin: 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Header--left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .Container {
+    .Header--left {
+      img {
+        width: 100%;
+        height: 40vh;
+      }
+    }
+  }
+}

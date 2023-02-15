@@ -1,0 +1,28 @@
+.theme-light {
+    --color-background: #ffffff;
+    --color-background--message: #ffffff;
+    --color-background-message-item:#f1f0f0;
+    --color-text-message:#223645;
+    --color-text-message-name: #223645;
+    --color-text-last-message:#647589;
+    --color-icon-button: rgba(0, 0, 0, 0.54);
+    --color-text: rgba(0, 0, 0, 1);
+    --color-text-contact:rgba(153, 153, 153, 1);
+    --color-input: rgba(0, 0, 0, 0.04);
+    --color-h2-notifi:#223645;
+    --color-h4-notifi:#647589;
+  }
+.theme-dark {
+    --color-background: #191b1f;
+    --color-background--message:#25262c;
+    --color-background-message-item:#191b1f;
+    --color-text-message:#ffffff;
+    --color-text-message-name:#ffffff;
+    --color-text-last-message:#ffffff;
+    --color-icon-button: honeydew;
+    --color-text:#ffffff;
+    --color-text-contact:#ffffff;
+    --color-input:#25262c;
+    --color-h2-notifi:#ffffff;
+    --color-h4-notifi:#ffffff;
+}

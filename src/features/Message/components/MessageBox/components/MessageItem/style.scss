@@ -1,0 +1,204 @@
+@import url('../../../../../../theme/index.scss');
+
+
+.Text-Style{
+    color: var(--color-text-message);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+
+.MessageItem{
+    li{
+        margin: 0;
+        padding: 0;
+    }
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    .MessageItem__Container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        clear: right;
+
+        .MessageItem__Avatar{
+            align-self: start;
+           
+        }
+        .MessageItem__Content{
+            padding-left: 10px;
+            max-width: 70%;
+            .MessageItem__Detail{
+                display: flex;
+                align-items: center;
+
+                .MessageItem__Name{
+                    margin-right: 20px;
+                    font-family: "Montserrat",sans-serif;
+                    font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+                    font-weight: 700;
+                    color: var(--color-text-message-name);
+                }
+
+                .MessageItem__Date{
+                    p{
+                        @extend .Text-Style;
+                    }
+                }
+            }
+            .MessageItem__Msg{
+                width: fit-content;
+                max-width: 100%;
+                border-radius: 30px;
+                min-height: 20px;
+                padding: 12px 20px;
+                background-color: var(--color-background-message-item);
+                color: var(--color-text-message);
+                font-weight: 600;
+                font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+                border-top-left-radius: 0;
+                p{
+                    margin: 0;
+                    overflow-wrap: break-word;
+                }
+            }
+
+            .MessageItem__Photo{
+                width: fit-content;
+                width: 100%;
+                img{
+                    max-height: 280px;
+                    max-width: 400px;
+                    border-radius: 15px;
+                }
+            }
+
+            .MessageItem__Sticker{
+                img{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 15px;
+                }
+            }
+
+            .MessageItem__File{
+
+                @extend .MessageItem__Msg;
+
+                p{
+                    overflow-wrap: break-word;
+                    span{
+                        margin-right: 5px;
+                        color: rgb(192, 193, 195);
+                    }
+                    a{
+                        text-decoration: none;
+                        color: var(--color-text-message);
+                    }
+                }
+            }
+
+            p{
+                margin: 0;
+            }
+
+        }
+    }
+
+    .MessageItem__Container--Right{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-right: 25px;
+        .MessageItem__Content--Right{
+            max-width: 70%;
+            align-self: flex-end;
+            display: flex;
+            flex-direction: column;
+            .MessageItem__Detail--Right{
+                text-align: right;
+                p{
+                    @extend .Text-Style;
+                    margin-top: 1px;
+                }
+    
+            }
+            .MessageItem__Msg--Right{
+                align-self: flex-end;
+                max-width: 100%;
+                border-radius: 30px;
+                min-height: 20px;
+                padding: 12px 20px;
+                background-color:rgb(0, 153, 255);
+                font-weight: 600;
+                font-size: calc(13px + (14 - 13) * ((100vw - 320px) / (1920 - 320)));
+                border-bottom-right-radius: 0;
+                p{
+                    margin: 0;
+                    overflow-wrap: break-word;
+                    color: #fff;
+                }
+            }
+
+            .MessageItem__Photo--Right{
+                align-self: flex-end;
+               img{
+                    max-height: 280px;
+                    max-width: 400px;
+                    border-radius: 15px;
+               }
+            }
+
+            .MessageItem__Sticker--Right{
+                align-self: flex-end;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            .MessageItem__File--Right{
+                @extend .MessageItem__Msg--Right;
+                cursor: pointer;
+                p{
+                    overflow-wrap: break-word;
+                    span{
+                        margin-right: 5px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .MessageItem{
+
+        .MessageItem__Container{
+            .MessageItem__Content{
+                .MessageItem__Photo{
+                    img{
+                        max-height: 240px;
+                        max-width: 280px;
+                    }
+                }
+            }
+        }
+
+        .MessageItem__Container--Right{
+            .MessageItem__Content--Right{
+                .MessageItem__Photo--Right{
+                    img{
+                        max-height: 240px;
+                        max-width: 280px;
+                    }
+                }
+            }
+        }
+    }
+}

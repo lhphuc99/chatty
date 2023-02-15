@@ -1,0 +1,16 @@
+.Emoji{
+    .icon{
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+
+    .Emoji{
+        .icon{
+            font-size: 20px;
+        }
+    }
+}

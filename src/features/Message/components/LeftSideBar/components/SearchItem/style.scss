@@ -1,0 +1,61 @@
+@import url('../../../../../../theme/index.scss');
+$backGround-item-hover:rgba(0, 132, 255, .2);
+
+.SearchItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 16px;
+    height: 64px;
+
+    .SearchItem__Info{
+        display: flex;
+        align-items: center;
+        .SearchItem__Avatar{
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    
+        .SearchItem__Name{
+            h4{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 15px;
+                font-weight: 500;
+                overflow: hidden;
+                max-width: 100px;
+                color: var(--color-text);
+
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }   
+    
+
+    .SearchItem__Btn{
+        .SearchItem__Btn--add{
+            background-color: #1c9dea;
+            width: 110px;
+           span{
+            font-size: 10px;
+           }
+        }
+
+        .SearchItem__Btn--unfr{
+            background-color: #1c9dea;
+            width: 110px;
+            span{
+                font-size: 10px;
+               }
+        }
+    }
+    &:hover{
+        background-color: $backGround-item-hover;
+    }
+}
